@@ -1,10 +1,44 @@
-.App {
-  text-align: center;
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: #EFEAE4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainRight {
+  padding-top: 20vh;
+  width: 50vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainWelcome {
+  font-size: 48px;
+}
+
+.mainFind {
+  font-size: 16px;
+  padding-bottom: 3vh;
+}
+
+.mainButton {
+  font-size: 48px;
+  border-radius: 10px;
+  border-width: 0;
+  background-color: pink;
+  width: 25vw;
+  padding: 2vw;
+}
+
+.mainButton:hover {
+  background-color: palevioletred;
+}
+
+.mainLeft {
+  height: 100vh;
+  width: 50vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
