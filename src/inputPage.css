@@ -1,0 +1,83 @@
+.inputPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputLeft {
+    width: 25vw;
+    height: 100vh;
+}
+
+.inputMiddle {
+    width: 50vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputRight {
+    width: 25vw;
+    height: 100vh;
+}
+
+.inputTitle {
+    font-size: 64px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    margin-top: 10vh;
+}
+
+.inputField {
+    width: 30vw;
+    height: 4vh;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.inputField:focus {
+    outline: none;
+}
+
+.inputField:focus::placeholder {
+    color: transparent;
+  }
+
+#input-static {
+    pointer-events: none;
+}
+
+#input-static-looking {
+    width: 35vw;
+    background-color: #FFB6B6;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    margin-right: 25vw;
+    pointer-events: none;
+}
+
+#input-static-stats {
+    width: 10vw;
+    background-color: #FFB6B6;
+    margin-bottom: 4vh;
+    margin-right: 50vw;
+    pointer-events: none;
+}
+
+.inputButton {
+    font-size: 40px;
+    border-radius: 10px;
+    border-width: 0;
+    background-color: #F2CBD7;
+    width: 20vw;
+    padding: 1vh;
+    margin-top: 4vh;
+}
+
+.inputButton:hover {
+    background-color: palevioletred;
+    cursor: pointer;
+  }

@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -8,9 +8,11 @@ function App() {
       
       </div>
       <div className="mainRight">
-        <h2 className="mainWelcome">Welcome <br></br>to Fluence</h2>
+        <h1 className="mainWelcome">Welcome <br></br>to Fluence</h1>
         <p className="mainFind">Want to find influencers and grow together?</p>
-        <button className="mainButton">Let's do it!</button>
+        <Link to="/input">
+          <button className="mainButton">Let's do it!</button>
+        </Link>
       </div>
     </div>
   );

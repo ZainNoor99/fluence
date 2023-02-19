@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: row;
-  background-color: #EFEAE4;
 }
 
 .mainRight {
@@ -28,13 +27,14 @@
   font-size: 48px;
   border-radius: 10px;
   border-width: 0;
-  background-color: pink;
+  background-color: #F2CBD7;
   width: 25vw;
   padding: 2vw;
 }
 
 .mainButton:hover {
   background-color: palevioletred;
+  cursor: pointer;
 }
 
 .mainLeft {
