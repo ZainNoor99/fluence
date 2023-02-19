@@ -12,8 +12,8 @@ const root = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
    <Routes>
-    <Route path='/' element={<App/>} />
-    <Route path='/input' element={<InputPage/>} />
+    <Route path='/fluence' element={<App/>} />
+    <Route path='/fluence/input' element={<InputPage/>} />
   </Routes>
   </BrowserRouter>,
   root
