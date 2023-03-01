@@ -27,7 +27,7 @@
   font-size: 48px;
   border-radius: 10px;
   border-width: 0;
-  background-color: #F2CBD7;
+  background-color: #f2cbd7;
   width: 25vw;
   padding: 2vw;
 }
@@ -40,6 +40,13 @@
 .mainLeft {
   height: 100vh;
   width: 50vw;
+}
+
+.welcome-svg {
+  position: fixed;
+  left: 5vw;
+  top: 20vh;
+  height: 70vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
