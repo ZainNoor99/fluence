@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fluence/static/css/main.6f07dc52.css",
-    "main.js": "/fluence/static/js/main.6cac9bf5.js",
+    "main.css": "/fluence/static/css/main.013c456a.css",
+    "main.js": "/fluence/static/js/main.de3d29a8.js",
     "static/js/787.bb9d96f4.chunk.js": "/fluence/static/js/787.bb9d96f4.chunk.js",
     "index.html": "/fluence/index.html",
-    "main.6f07dc52.css.map": "/fluence/static/css/main.6f07dc52.css.map",
-    "main.6cac9bf5.js.map": "/fluence/static/js/main.6cac9bf5.js.map",
+    "main.013c456a.css.map": "/fluence/static/css/main.013c456a.css.map",
+    "main.de3d29a8.js.map": "/fluence/static/js/main.de3d29a8.js.map",
     "787.bb9d96f4.chunk.js.map": "/fluence/static/js/787.bb9d96f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f07dc52.css",
-    "static/js/main.6cac9bf5.js"
+    "static/css/main.013c456a.css",
+    "static/js/main.de3d29a8.js"
   ]
 }
