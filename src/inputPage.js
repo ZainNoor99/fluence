@@ -3,6 +3,9 @@ import { useState } from "react"
 import { getData } from "./apiUtil"
 import { useNavigate } from "react-router-dom"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+
 function InputPage() {
   const navigate = useNavigate()
 
@@ -10,6 +13,20 @@ function InputPage() {
   const [brand, setBrand] = useState("")
   const [brandPlaceHolder, setBrandPlaceHolder] = useState("Comany/Brand")
   const [users, setUsers] = useState([])
+
+  //dropdown stuff
+  const options = ["Nike", "Adidas", "Athletic Greens"]
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedOption, setSelectedOption] = useState(options[0])
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option)
+    toggleDropdown()
+  }
 
   return (
     <div className="inputPage">
@@ -55,23 +72,37 @@ function InputPage() {
           <p>Influencers who have worked with...</p>
         </div>
 
-        <input
+        {/* <input
           type="text"
           value={brand}
           placeholder={brandPlaceHolder}
           onChange={(e) => setBrand(e.target.value)}
           className="chat-bubble chat-right"
-        />
+        /> */}
+
+        <div className="chat-bubble chat-right">
+          <div className="dropdown">
+            <div className="dropdown-header" onClick={toggleDropdown}>
+              {selectedOption}
+              <i className={`fas fa-chevron-${isOpen ? "up" : "down"}`}></i>
+            </div>
+            {isOpen && (
+              <ul className="dropdown-options">
+                {options.map((option, index) => (
+                  <li key={index} onClick={() => handleOptionSelect(option)}>
+                    {option}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
 
         <button
           className="inputButton"
           onClick={async () => {
             console.log("line 61")
-            let usersData = await getData()
-            setUsers(usersData)
-            if (users.length !== 0) {
-              navigate("/fluence/results", { state: { users } })
-            }
+            navigate("/fluence/results", { state: { brand: selectedOption } })
           }}
         >
           Show me!

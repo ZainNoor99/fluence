@@ -5,7 +5,7 @@
 }
 
 .inputMiddle {
-  width: 30vw;
+  width: 26vw;
   height: 100vh;
   text-align: center;
   display: flex;
@@ -99,6 +99,25 @@ input:focus::placeholder {
   left: 5vw;
   top: 60vh;
   height: 50vh;
+}
+
+/* dropdown header stuff */
+.dropdown-header {
+  text-align: center;
+  color: rgb(144, 144, 144);
+}
+
+.dropdown-options {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdown-options li {
+  margin: 10px;
+  cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,

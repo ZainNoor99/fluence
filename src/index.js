@@ -3,6 +3,9 @@ import "./index.css"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
+//font awesome
+import "@fortawesome/fontawesome-svg-core/styles.css"
+
 import InputPage from "./inputPage"
 import ResultsPage from "./resultsPage"
 

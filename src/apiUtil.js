@@ -1,5 +1,4 @@
 export const getData = async () => {
-  console.log("line 2")
   let responseObj
   await fetch("http://localhost:8080/scraper")
     .then((response) => {

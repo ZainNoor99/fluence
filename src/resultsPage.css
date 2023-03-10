@@ -75,3 +75,14 @@
   border-width: 5px;
   border-style: solid;
 }
+
+/* profile link a tag */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #ff5e5e;
+  transition-duration: 0.1s;
+}

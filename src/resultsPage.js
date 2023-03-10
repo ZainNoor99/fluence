@@ -1,40 +1,70 @@
 import "./resultsPage.css"
 import { useLocation } from "react-router-dom"
+import nikeUsers from "./userObjs/nike-userObjs.json"
+import adidasUsers from "./userObjs/adidas-userObjs.json"
+import athelticGreens from "./userObjs/athelticgreens-userObjs.json"
 
 function ResultsPage() {
+  console.log("zains user objs: ", athelticGreens)
+  let userObjs = []
   const location = useLocation()
-  let users = location.state.users
-  users = [...users, ...users, ...users, ...users]
-  console.log("results", users)
+  let brand = location.state.brand
+  console.log(brand)
+  switch (brand) {
+    case "Nike":
+      userObjs = nikeUsers
+      break
+    case "Adidas":
+      userObjs = adidasUsers
+      break
+    case "Athletic Greens":
+      userObjs = athelticGreens
+      break
+  }
+  console.log("userobjs", userObjs)
   return (
     <div className="resultsPage">
       <h1 className="resultsTitle">Fluence</h1>
       <h3 className="resultsPeopleHeading">
         Here are some cool people that have worked with{" "}
-        <span className="resultsBrand">Nike</span>!
+        <span className="resultsBrand">{brand}</span>!
       </h3>
-      {users.map((user) => (
-        <div className="userDiv">
-          <div className="userPic">
-            <img
-              loading="lazy"
-              src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/8cb6606169e27a8a405c0c4d0a849af9~c5_100x100.jpeg?x-expires=1677794400&amp;x-signature=SwWfXsnV5vKuILswAyB3oYqc2aw%3D"
-              class="tiktok-1zpj2q-ImgAvatar e1e9er4e1"
-            />
-          </div>
-          <div className="userStats">
-            <div className="resultsUserInfoName">@{user}</div>
-            <div className="resultsUserInfo">
-              Platform <br></br>
-              <span className="userInfoSpan">TikTok</span>
+      {userObjs.map((user) => {
+        let followers = 0
+        if (user.followers.charAt(user.followers.length - 1) === "K") {
+          followers = parseFloat(user.followers.slice(0, -1)) * 1000
+        } else if (user.followers.charAt(user.followers.length - 1) === "M") {
+          followers = parseFloat(user.followers.slice(0, -1)) * 1000000
+        } else {
+          followers = parseInt(user.followers)
+        }
+        return (
+          <div className="userDiv">
+            <div className="userPic">
+              <img
+                loading="lazy"
+                src={user.userAvatar}
+                class="tiktok-1zpj2q-ImgAvatar e1e9er4e1"
+              />
             </div>
-            <div className="resultsUserInfo">
-              Followers <br></br>
-              <span className="userInfoSpan">10.2k</span>
+            <div className="userStats">
+              <div className="resultsUserInfoName">
+                <a href={user.profileLink} target="_blank">
+                  @{user.username}
+                </a>
+              </div>
+              <div className="resultsUserInfo">
+                Platform <br></br>
+                <span className="userInfoSpan">TikTok</span>
+              </div>
+              <div className="resultsUserInfo">
+                Followers <br></br>
+                <span className="userInfoSpan">{followers}</span>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }
