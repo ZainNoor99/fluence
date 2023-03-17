@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom"
 import nikeUsers from "./userObjs/nike-userObjs.json"
 import adidasUsers from "./userObjs/adidas-userObjs.json"
 import athelticGreens from "./userObjs/athelticgreens-userObjs.json"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
 
 function ResultsPage() {
   let userObjs = []
@@ -90,7 +92,10 @@ function ResultsPage() {
                 )}
               </div>
               <div className="dropdown">
-                <span className="resultsUserInfo">Bio</span>
+                <span className="resultsUserInfo">
+                  Bio{" "}
+                  {<FontAwesomeIcon icon={faCircleInfo} color={"#f8ba00"} />}
+                </span>
                 <span>
                   <div class="dropdown-content">
                     <p>{user.bio}</p>
