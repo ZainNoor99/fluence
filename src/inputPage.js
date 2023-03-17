@@ -17,7 +17,7 @@ function InputPage() {
   const [users, setUsers] = useState([])
 
   //dropdown stuff
-  const options = ["Nike", "Adidas", "Athletic Greens"]
+  const options = ["Nike", "Adidas", "Athletic Greens", "L'Oréal"]
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState(options[0])
 
