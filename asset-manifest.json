@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/fluence/static/css/main.ad571f96.css",
-    "main.js": "/fluence/static/js/main.57783926.js",
+    "main.css": "/fluence/static/css/main.b77d2c2e.css",
+    "main.js": "/fluence/static/js/main.6dcc7a55.js",
     "static/js/787.bb9d96f4.chunk.js": "/fluence/static/js/787.bb9d96f4.chunk.js",
+    "static/media/NotoSans-Bold.ttf": "/fluence/static/media/NotoSans-Bold.23e70cfbbe0783c66804.ttf",
+    "static/media/NotoSans-Regular.ttf": "/fluence/static/media/NotoSans-Regular.eae34fa8f1e0c4c6d797.ttf",
+    "static/media/Comfortaa-Regular.ttf": "/fluence/static/media/Comfortaa-Regular.051d690872878482e7e7.ttf",
+    "static/media/Comfortaa-Bold.ttf": "/fluence/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/fluence/index.html",
-    "main.ad571f96.css.map": "/fluence/static/css/main.ad571f96.css.map",
-    "main.57783926.js.map": "/fluence/static/js/main.57783926.js.map",
+    "main.b77d2c2e.css.map": "/fluence/static/css/main.b77d2c2e.css.map",
+    "main.6dcc7a55.js.map": "/fluence/static/js/main.6dcc7a55.js.map",
     "787.bb9d96f4.chunk.js.map": "/fluence/static/js/787.bb9d96f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad571f96.css",
-    "static/js/main.57783926.js"
+    "static/css/main.b77d2c2e.css",
+    "static/js/main.6dcc7a55.js"
   ]
 }
