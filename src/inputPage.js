@@ -2,6 +2,7 @@ import "./inputPage.css"
 import { useState } from "react"
 import { getData } from "./apiUtil"
 import { useNavigate } from "react-router-dom"
+import LoadingCircle from "./loadingCircle"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"
@@ -10,6 +11,7 @@ function InputPage() {
   const navigate = useNavigate()
 
   const [followers, setFollowers] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
   const [brand, setBrand] = useState("")
   const [brandPlaceHolder, setBrandPlaceHolder] = useState("Comany/Brand")
   const [users, setUsers] = useState([])
@@ -26,6 +28,16 @@ function InputPage() {
   const handleOptionSelect = (option) => {
     setSelectedOption(option)
     toggleDropdown()
+  }
+
+  const handleLoading = () => {
+    console.log("line 34", isLoading)
+    setIsLoading(true)
+    console.log("line 36", isLoading)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 100000000000000000)
+    console.log("line 40", isLoading)
   }
 
   return (
@@ -106,7 +118,7 @@ function InputPage() {
           <div className="dropdown">
             <div className="dropdown-header" onClick={toggleDropdown}>
               <div className="selectedOption">{selectedOption}</div>
-              <div classname="dropdownIcon">
+              <div>
                 <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
               </div>
             </div>
@@ -125,8 +137,8 @@ function InputPage() {
         <button
           className="inputButton"
           onClick={async () => {
-            console.log("line 61")
-            navigate("/fluence/results", { state: { brand: selectedOption } })
+            handleLoading()
+            navigate("/fluence/loading", { state: { brand: selectedOption } })
           }}
         >
           Show me!
@@ -411,6 +423,7 @@ function InputPage() {
           </defs>
         </svg>
       </div>
+      {isLoading && <LoadingCircle />}
     </div>
   )
 }

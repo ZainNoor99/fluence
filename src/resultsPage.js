@@ -5,7 +5,6 @@ import adidasUsers from "./userObjs/adidas-userObjs.json"
 import athelticGreens from "./userObjs/athelticgreens-userObjs.json"
 
 function ResultsPage() {
-  console.log("zains user objs: ", athelticGreens)
   let userObjs = []
   const location = useLocation()
   let brand = location.state.brand
@@ -23,7 +22,6 @@ function ResultsPage() {
   }
 
   userObjs.map((user) => {
-    let followers = 0
     if (user.followers[user.followers.length - 1] === "K") {
       user.followers = Math.floor(
         parseFloat(user.followers.slice(0, -1)) * 1000
@@ -47,6 +45,13 @@ function ResultsPage() {
       </h3>
 
       {userObjs.map((user) => {
+        let linkText = user.link
+        console.log(linkText)
+        if (linkText) {
+          if (linkText.length > 10) {
+            linkText = linkText.substring(0, 10) + "..."
+          }
+        }
         return (
           <div className="userDiv">
             <div className="userPic">
@@ -69,6 +74,28 @@ function ResultsPage() {
               <div className="resultsUserInfo">
                 Followers <br></br>
                 <span className="userInfoSpan">{user.followers}</span>
+              </div>
+              <div className="resultsUserInfo">
+                Link <br></br>
+                {linkText ? (
+                  <a
+                    className="userInfoSpan"
+                    href={"//" + user.link}
+                    target="_blank"
+                  >
+                    {linkText ? linkText : "N/A"}
+                  </a>
+                ) : (
+                  <span className="userInfoSpan">N/A</span>
+                )}
+              </div>
+              <div className="dropdown">
+                <span className="resultsUserInfo">Bio</span>
+                <span>
+                  <div class="dropdown-content">
+                    <p>{user.bio}</p>
+                  </div>
+                </span>
               </div>
             </div>
           </div>

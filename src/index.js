@@ -11,6 +11,7 @@ import ResultsPage from "./resultsPage"
 
 import ReactDOM from "react-dom"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import LoadingCircle from "./loadingCircle"
 
 const root = document.getElementById("root")
 ReactDOM.render(
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="/fluence" element={<App />} />
       <Route path="/fluence/input" element={<InputPage />} />
       <Route path="/fluence/results" element={<ResultsPage />} />
+      <Route path="/fluence/loading" element={<LoadingCircle />} />
     </Routes>
   </BrowserRouter>,
   root
