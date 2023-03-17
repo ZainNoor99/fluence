@@ -3,9 +3,10 @@ import { useLocation } from "react-router-dom"
 
 import nikeUsers from "./userObjs/nike-userObjs.json"
 import adidasUsers from "./userObjs/adidas-userObjs.json"
-import athelticGreens from "./userObjs/athelticgreens-userObjs.json"
+import athelticGreensUsers from "./userObjs/athelticgreens-userObjs.json"
 import lorealUsers from "./userObjs/loreal-userObjs.json"
 import indigoUsers from "./userObjs/indigo-userObjs.json"
+import gymSharkUsers from "./userObjs/gymshark-userObjs.json"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
@@ -23,13 +24,16 @@ function ResultsPage() {
       userObjs = adidasUsers
       break
     case "Athletic Greens":
-      userObjs = athelticGreens
+      userObjs = athelticGreensUsers
       break
     case "L'Oréal":
       userObjs = lorealUsers
       break
     case "Indigo":
       userObjs = indigoUsers
+      break
+    case "Gym Shark":
+      userObjs = gymSharkUsers
       break
   }
 
