@@ -62,10 +62,16 @@ function ResultsPage() {
 
       {userObjs.map((user) => {
         let linkText = user.link
-        console.log(linkText)
+        let userName = user.username
         if (linkText) {
           if (linkText.length > 10) {
             linkText = linkText.substring(0, 10) + "..."
+          }
+        }
+
+        if (userName) {
+          if (userName.length > 12) {
+            userName = userName.substring(0, 13) + "..."
           }
         }
         return (
@@ -80,7 +86,7 @@ function ResultsPage() {
             <div className="userStats">
               <div className="resultsUserInfoName">
                 <a href={user.profileLink} target="_blank">
-                  @{user.username}
+                  @{userName}
                 </a>
               </div>
               <div className="resultsUserInfo">
