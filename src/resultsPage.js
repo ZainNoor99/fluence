@@ -21,23 +21,32 @@ function ResultsPage() {
       userObjs = athelticGreens
       break
   }
-  console.log("userobjs", userObjs)
+
+  userObjs.map((user) => {
+    let followers = 0
+    if (user.followers[user.followers.length - 1] === "K") {
+      user.followers = Math.floor(
+        parseFloat(user.followers.slice(0, -1)) * 1000
+      )
+    } else if (user.followers[user.followers.length - 1] === "M") {
+      user.followers = Math.floor(
+        parseFloat(user.followers.slice(0, -1)) * 1000000
+      )
+    } else {
+      user.followers = Math.floor(parseInt(user.followers))
+    }
+  })
+
+  userObjs.sort((a, b) => (a.followers <= b.followers ? 1 : -1))
   return (
     <div className="resultsPage">
       <h1 className="resultsTitle">Fluence</h1>
       <h3 className="resultsPeopleHeading">
-        Here are some cool people that have worked with{" "}
-        <span className="resultsBrand">{brand}</span>!
+        Here are some cool people that have worked with
+        <span className="resultsBrand"> {brand}</span>!
       </h3>
+
       {userObjs.map((user) => {
-        let followers = 0
-        if (user.followers.charAt(user.followers.length - 1) === "K") {
-          followers = parseFloat(user.followers.slice(0, -1)) * 1000
-        } else if (user.followers.charAt(user.followers.length - 1) === "M") {
-          followers = parseFloat(user.followers.slice(0, -1)) * 1000000
-        } else {
-          followers = parseInt(user.followers)
-        }
         return (
           <div className="userDiv">
             <div className="userPic">
@@ -59,7 +68,7 @@ function ResultsPage() {
               </div>
               <div className="resultsUserInfo">
                 Followers <br></br>
-                <span className="userInfoSpan">{followers}</span>
+                <span className="userInfoSpan">{user.followers}</span>
               </div>
             </div>
           </div>

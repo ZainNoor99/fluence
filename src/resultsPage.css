@@ -7,6 +7,7 @@
 }
 
 .resultsTitle {
+  font-family: "Comfortaa";
   font-size: 64px;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -14,7 +15,7 @@
 }
 
 .resultsBrand {
-  color: #ff5e5e;
+  color: #ef8600;
 }
 
 .resultsPeopleHeading {
@@ -35,7 +36,7 @@
   width: 70vw;
   height: 10vh;
   margin-bottom: 3vh;
-  background-color: #fcf7ec;
+  background-color: #ffffff;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -71,7 +72,7 @@
 
 .userPic img {
   border-radius: 50%;
-  border-color: #ff5e5e;
+  border-color: #ef8600;
   border-width: 5px;
   border-style: solid;
 }
@@ -83,6 +84,6 @@ a {
 }
 
 a:hover {
-  color: #ff5e5e;
+  color: #f8ba00;
   transition-duration: 0.1s;
 }

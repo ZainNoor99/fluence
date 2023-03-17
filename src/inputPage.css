@@ -18,6 +18,7 @@
   text-decoration: underline;
   text-decoration-thickness: 2px;
   margin-top: 10vh;
+  font-family: "Comfortaa";
 }
 
 .chat-bubble {
@@ -51,7 +52,7 @@
 
 .chat-bubble.chat-left {
   align-self: flex-start;
-  background-color: #ffb6b6;
+  background-color: #f8ba00;
 }
 
 .chat-bubble.chat-right {
@@ -75,36 +76,49 @@ input:focus::placeholder {
   font-size: 35px;
   border-radius: 10px;
   border-width: 0;
-  background-color: #f2cbd7;
+  background-color: #1746a2;
   width: 15vw;
   height: 8vh;
   padding: 1vh;
   margin-top: 3vh;
+  color: #ffffff;
 }
 
 .inputButton:hover {
-  background-color: palevioletred;
+  background-color: #113375;
   cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 .input-phone-svg {
   position: fixed;
-  right: 0;
+  right: -2vw;
   top: 10vh;
-  height: 50vh;
+  height: 60vh;
 }
 
 .social-girl-svg {
   position: fixed;
   left: 5vw;
-  top: 60vh;
-  height: 50vh;
+  top: 50vh;
+  height: 10vh;
+  width: 10vw;
 }
 
 /* dropdown header stuff */
 .dropdown-header {
   text-align: center;
   color: rgb(144, 144, 144);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selectedOption {
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+  width: 100%;
 }
 
 .dropdown-options {
@@ -116,7 +130,8 @@ input:focus::placeholder {
 }
 
 .dropdown-options li {
-  margin: 10px;
+  margin-right: 20px;
+  margin-top: 10px;
   cursor: pointer;
 }
 

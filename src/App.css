@@ -1,24 +1,32 @@
 .main {
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .mainRight {
   padding-top: 20vh;
   width: 50vw;
-  height: 100vh;
+  height: 80vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .mainWelcome {
-  font-size: 48px;
+  font-size: 70px;
+}
+
+.mainWelcome span {
+  color: #f8ba00;
+  font-family: "Comfortaa";
+  font-weight: bold;
 }
 
 .mainFind {
-  font-size: 16px;
+  font-size: 24px;
   padding-bottom: 3vh;
   font-weight: bold;
 }
@@ -27,14 +35,16 @@
   font-size: 48px;
   border-radius: 10px;
   border-width: 0;
-  background-color: #f2cbd7;
-  width: 25vw;
+  background-color: #1746a2;
+  width: 18vw;
   padding: 2vw;
+  color: #ffffff;
 }
 
 .mainButton:hover {
-  background-color: palevioletred;
+  background-color: #113375;
   cursor: pointer;
+  transition-duration: 0.2s;
 }
 
 .mainLeft {
