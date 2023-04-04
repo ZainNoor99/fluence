@@ -53,7 +53,7 @@ function InputPage() {
         <h1 className="inputTitle">Fluence</h1>
 
         <div className="chat-bubble static chat-left">
-          <p>Stats I'm looking for...</p>
+          <p>I'm looking for Influencers with...</p>
         </div>
 
         <input
@@ -110,7 +110,7 @@ function InputPage() {
         </div>
 
         <div className="chat-bubble static chat-left">
-          <p>Influencers who have worked with...</p>
+          <p>That have worked with...</p>
         </div>
 
         {/* <input
